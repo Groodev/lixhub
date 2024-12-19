@@ -41,6 +41,17 @@ local Tab = Window:Tab({
 })
 
 local Tab = Window:Tab({
-    Title = "Main",
-    Icon = "folder", -- lucide or rbxassetid
+    Title = "FreeScript",
+    Icon = "rbxassetid://88147973848189", -- lucide or rbxassetid
 })
+
+local Tab = Window:Tab({
+    Title = "Bypass",
+    Icon = "rbxassetid://88147973848189", -- lucide or rbxassetid
+})
+
+local Tab = Window:Tab({
+    Title = "Settings",
+    Icon = "rbxassetid://88147973848189", -- lucide or rbxassetid
+})
+
