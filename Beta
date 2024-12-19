@@ -147,7 +147,7 @@ end)
 })
 
 local Slider = Tab:Slider({
-    Title = "Slider",
+    Title = "Jump Boost",
     Step = 1,
     Value = {
         Min = 1,
@@ -261,7 +261,44 @@ end)
     end,
 })
 
+local Toggle = Tab:Toggle({
+    Title = "Anti Ban",
+    Desc = "protect your account",
+    Value = true,
+    Callback = function(state)
+        local players = game:GetService("Players");
+local localPlayer = players.LocalPlayer;
 
+local function checkIsStaff(plr) -- Tags aren't set immediately, it's usually 4 or 5 seconds after they join.
+   local attr;
+   while true do
+       attr = plr:GetAttribute("_tag");
+       if attr ~= nil then
+           break;
+       end
+       task.wait(0.25);
+   end
+   if attr < 0 or attr > 2 then
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+   local Servers = ListServers(Next)
+   Server = Servers.data[1]
+   Next = Servers.nextPageCursor
+until Server
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+    end,
+})
 
 local Tab = Window:Tab({
     Title = "Settings",
