@@ -35,5 +35,12 @@ local Notification = WindUI:Notify({
     Duration = 5,
 })
 
+local Tab = Window:Tab({
+    Title = "Main",
+    Icon = "rbxassetid://88147973848189", -- lucide or rbxassetid
+})
 
-
+local Tab = Window:Tab({
+    Title = "Main",
+    Icon = "folder", -- lucide or rbxassetid
+})
