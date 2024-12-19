@@ -5,7 +5,7 @@ local Window = WindUI:CreateWindow({
     Icon = "rbxassetid://10511856020", -- Url or rbxassetid or lucide
     Author = "Groovy", -- Author & Creator
     Folder = "DKHub", -- Folder name for saving data (And key)
-    Size = UDim2.fromOffset(580, 460), -- UI Size
+    Size = UDim2.fromOffset(230, 230), -- UI Size
     KeySystem = { -- Creates key system
         Key = "DHOnTop", -- key
         Note = "Join Our Discord To Get The Key!", -- Note
@@ -37,21 +37,43 @@ local Notification = WindUI:Notify({
 
 local Tab = Window:Tab({
     Title = "Main",
-    Icon = "rbxassetid://88147973848189", -- lucide or rbxassetid
+    Icon = "house", -- lucide or rbxassetid
 })
 
 local Tab = Window:Tab({
     Title = "FreeScript",
-    Icon = "rbxassetid://88147973848189", -- lucide or rbxassetid
+    Icon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNjcm9sbC10ZXh0Ij48cGF0aCBkPSJNMTUgMTJoLTUiLz48cGF0aCBkPSJNMTUgOGgtNSIvPjxwYXRoIGQ9Ik0xOSAxN1Y1YTIgMiAwIDAgMC0yLTJINCIvPjxwYXRoIGQ9Ik04IDIxaDEyYTIgMiAwIDAgMCAyLTJ2LTFhMSAxIDAgMCAwLTEtMUgxMWExIDEgMCAwIDAtMSAxdjFhMiAyIDAgMSAxLTQgMFY1YTIgMiAwIDEgMC00IDB2MmExIDEgMCAwIDAgMSAxaDMiLz48L3N2Zz4=", -- lucide or rbxassetid
 })
 
 local Tab = Window:Tab({
     Title = "Bypass",
-    Icon = "rbxassetid://88147973848189", -- lucide or rbxassetid
+    Icon = "folder", -- lucide or rbxassetid
 })
 
 local Tab = Window:Tab({
     Title = "Settings",
-    Icon = "rbxassetid://88147973848189", -- lucide or rbxassetid
+    Icon = "folder", -- lucide or rbxassetid
+})
+
+Window:SelectTab(1) -- Number of Tab
+local Paragraph = Tab:Paragraph({
+    Title = "Thanks For Using DarknessHub!",
+    Desc = "Enjoy!",
+    Image = "droplet", -- lucide or URL or rbxassetid://
+    ImageSize = 20,
+    Buttons = {
+        {
+            Title = "Button 1",
+            Callback = function() print("Dc") end
+        },
+        {
+            Title = "Button 2",
+            Callback = function() print("Tt") end
+        },
+        {
+            Title = "Button 3",
+            Callback = function() print("Yt") end
+        }
+    }
 })
 
