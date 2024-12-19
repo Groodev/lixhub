@@ -40,22 +40,6 @@ local Tab = Window:Tab({
     Icon = "house", -- lucide or rbxassetid
 })
 
-local Tab = Window:Tab({
-    Title = "FreeScript",
-    Icon = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNjcm9sbC10ZXh0Ij48cGF0aCBkPSJNMTUgMTJoLTUiLz48cGF0aCBkPSJNMTUgOGgtNSIvPjxwYXRoIGQ9Ik0xOSAxN1Y1YTIgMiAwIDAgMC0yLTJINCIvPjxwYXRoIGQ9Ik04IDIxaDEyYTIgMiAwIDAgMCAyLTJ2LTFhMSAxIDAgMCAwLTEtMUgxMWExIDEgMCAwIDAtMSAxdjFhMiAyIDAgMSAxLTQgMFY1YTIgMiAwIDEgMC00IDB2MmExIDEgMCAwIDAgMSAxaDMiLz48L3N2Zz4=", -- lucide or rbxassetid
-})
-
-local Tab = Window:Tab({
-    Title = "Bypass",
-    Icon = "folder", -- lucide or rbxassetid
-})
-
-local Tab = Window:Tab({
-    Title = "Settings",
-    Icon = "folder", -- lucide or rbxassetid
-})
-
-Window:SelectTab(1) -- Number of Tab
 local Paragraph = Tab:Paragraph({
     Title = "Thanks For Using DarknessHub!",
     Desc = "Enjoy!",
@@ -63,22 +47,22 @@ local Paragraph = Tab:Paragraph({
     ImageSize = 20,
     Buttons = {
         {
-            Title = "Button 1",
+            Title = "Discord",
             Callback = function() print("Dc") end
         },
         {
-            Title = "Button 2",
+            Title = "Tiktok",
             Callback = function() print("Tt") end
         },
         {
-            Title = "Button 3",
+            Title = "Youtube",
             Callback = function() print("Yt") end
         }
     }
 })
 local Button = Tab:Button({
     Title = "Server Hopper",
-    Desc = "Move To New Server!",
+    Desc = "Move To New Server! | Please Wait..",
     Callback = function()
         local Player = game.Players.LocalPlayer    
 local Http = game:GetService("HttpService")
@@ -108,7 +92,7 @@ until not Next
 
 local Button = Tab:Button({
     Title = "Lower ServerHop",
-    Desc = "Move To Lower Server",
+    Desc = "Move To Lower Server | Please Wait...",
     Callback = function()
         local Http = game:GetService("HttpService")
 local TPS = game:GetService("TeleportService")
@@ -130,3 +114,18 @@ until Server
 TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
     end,
 })
+
+local Tab = Window:Tab({
+    Title = "FreeScript",
+    Icon = "scroll-text", })
+
+local Tab = Window:Tab({
+    Title = "Bypass",
+    Icon = "shield-alert", -- lucide or rbxassetid
+})
+
+local Tab = Window:Tab({
+    Title = "Settings",
+    Icon = "settings", -- lucide or rbxassetid
+})
+
