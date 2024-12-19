@@ -2,18 +2,38 @@ local WindUI = loadstring(game:HttpGet("https://tree-hub.vercel.app/api/UI/WindU
 local Player = game.Players.LocalPlayer
 local Window = WindUI:CreateWindow({
     Title = "DarknessHub", -- UI Title
-    Icon = "rbxassetid://", -- Url or rbxassetid or lucide
-    Author = ".ftgs", -- Author & Creator
-    Folder = "CloudHub", -- Folder name for saving data (And key)
+    Icon = "rbxassetid://10511856020", -- Url or rbxassetid or lucide
+    Author = "Groovy", -- Author & Creator
+    Folder = "DKHub", -- Folder name for saving data (And key)
     Size = UDim2.fromOffset(580, 460), -- UI Size
     KeySystem = { -- Creates key system
-        Key = "1234", -- key
-        Note = "The Key is 1234", -- Note
+        Key = "DHOnTop", -- key
+        Note = "Join Our Discord To Get The Key!", -- Note
         URL = "https://github.com/Footagesus/WindUI", -- URL To get key (example: Discord)
-        SaveKey = true, -- Saves the key in the folder specified above
+        SaveKey = false, -- Saves the key in the folder specified above
     }, 
-    Transparent = true,-- UI Transparency
+    Transparent = false,-- UI Transparency
     Theme = "Dark", -- UI Theme
     SideBarWidth = 170, -- UI Sidebar Width (number)
     HasOutline = true, -- Adds Outlines to the window
 })
+
+Window:EditOpenButton({
+    Title = "Open Button",
+    Icon = "door-closed",
+    CornerRadius = UDim.new(0,10),
+    StrokeThickness = 2,
+    Color = ColorSequence.new( -- gradient
+        Color3.fromHex("FF0F7B"), 
+        Color3.fromHex("F89B29")
+    )
+})
+
+local Notification = WindUI:Notify({
+    Title = "Logged in successful!",
+    Content = "You Are Logged In As "..Player.Name..".",
+    Duration = 5,
+})
+
+
+
