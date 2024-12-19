@@ -1,33 +1,19 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Betahub", "BloodTheme")
-
---tab
-local Tab = Window:NewTab("TabName")
-local Section = Tab:NewSection("Section Name")
-
---button
-Section:NewButton("ButtonText", "ButtonInfo", function()
-    print("Clicked")
-end)
-
-Section:NewLabel("LabelText")
-
-Section:NewSlider("SliderText", "SliderInfo", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-end)
-
-Section:NewTextBox("TextboxText", "TextboxInfo", function(txt)
-	print(txt)
-	end)
-	
-	Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
-	Library:ToggleUI()
-end)
-	
-Section:NewToggle("ToggleText", "ToggleInfo", function(state)
-    if state then
-        print("Toggle On")
-    else
-        print("Toggle Off")
-    end
-end)
+local WindUI = loadstring(game:HttpGet("https://tree-hub.vercel.app/api/UI/WindUI"))()
+local Player = game.Players.LocalPlayer
+local Window = WindUI:CreateWindow({
+    Title = "DarknessHub", -- UI Title
+    Icon = "rbxassetid://", -- Url or rbxassetid or lucide
+    Author = ".ftgs", -- Author & Creator
+    Folder = "CloudHub", -- Folder name for saving data (And key)
+    Size = UDim2.fromOffset(580, 460), -- UI Size
+    KeySystem = { -- Creates key system
+        Key = "1234", -- key
+        Note = "The Key is 1234", -- Note
+        URL = "https://github.com/Footagesus/WindUI", -- URL To get key (example: Discord)
+        SaveKey = true, -- Saves the key in the folder specified above
+    }, 
+    Transparent = true,-- UI Transparency
+    Theme = "Dark", -- UI Theme
+    SideBarWidth = 170, -- UI Sidebar Width (number)
+    HasOutline = true, -- Adds Outlines to the window
+})
